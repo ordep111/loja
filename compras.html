@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja Online</title>
+  <style>
+    :root {
+      --primary-color: #4a90e2;
+      --background: #f4f6f8;
+      --text-color: #333;
+      --card-bg: #fff;
+      --shadow: rgba(0, 0, 0, 0.1);
+      --footer-bg: #222;
+      --footer-text-color: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 10px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--primary-color);
+      font-size: 1.1rem;
+      margin: 0 20px;
+      padding: 5px 0;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #444;
+    }
+
+    .container {
+      display: flex;
+      margin: 20px;
+    }
+
+    .product-list {
+      flex: 3;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .product-card {
+      background-color: var(--card-bg);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px var(--shadow);
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px var(--shadow);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .product-card h3 {
+      color: var(--primary-color);
+      margin: 10px 0;
+    }
+
+    .product-card .price {
+      color: #888;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    .product-card button {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .product-card button:hover {
+      background-color: #357ab7;
+    }
+
+    .sidebar {
+      flex: 1;
+      background-color: var(--card-bg);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px var(--shadow);
+    }
+
+    .sidebar h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .cart-item span {
+      color: #444;
+    }
+
+    footer {
+      background-color: var(--footer-bg);
+      color: var(--footer-text-color);
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Minha Loja Online</h1>
+  </header>
+
+  <!-- Navegação -->
+  <nav>
+    <a href="#">Início</a>
+    <a href="#">Produtos</a>
+    <a href="#">Promoções</a>
+    <a href="#">Contato</a>
+  </nav>
+
+  <!-- Conteúdo Principal -->
+  <div class="container">
+
+    <!-- Lista de Produtos -->
+    <div class="product-list">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200x200" alt="Produto 1">
+        <h3>Produto 1</h3>
+        <p class="price">R$ 199,99</p>
+        <button>Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200x200" alt="Produto 2">
+        <h3>Produto 2</h3>
+        <p class="price">R$ 249,99</p>
+        <button>Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200x200" alt="Produto 3">
+        <h3>Produto 3</h3>
+        <p class="price">R$ 159,99</p>
+        <button>Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200x200" alt="Produto 4">
+        <h3>Produto 4</h3>
+        <p class="price">R$ 119,99</p>
+        <button>Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200x200" alt="Produto 5">
+        <h3>Produto 5</h3>
+        <p class="price">R$ 299,99</p>
+        <button>Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200x200" alt="Produto 6">
+        <h3>Produto 6</h3>
+        <p class="price">R$ 99,99</p>
+        <button>Adicionar ao Carrinho</button>
+      </div>
+    </div>
+
+    <!-- Barra Lateral (Carrinho de Compras) -->
+    <div class="sidebar">
+      <h2>Meu Carrinho</h2>
+      <div class="cart-item">
+        <span>Produto 1</span><span>R$ 199,99</span>
+      </div>
+      <div class="cart-item">
+        <span>Produto 2</span><span>R$ 249,99</span>
+      </div>
+      <div class="cart-item">
+        <span>Produto 3</span><span>R$ 159,99</span>
+      </div>
+      <hr>
+      <div class="cart-item">
+        <strong>Total</strong><span>R$ 609,97</span>
+      </div>
+      <button style="width: 100%; padding: 10px; background-color: var(--primary-color); color: white; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.3s;">
+        Finalizar Compra
+      </button>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 Minha Loja Online - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
